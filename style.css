@@ -1,0 +1,126 @@
+body {
+	width: 100%;
+	margin: 0;
+}
+
+#allpage {
+	background-color: #b3d9ff;
+	margin-top: 0;
+	width: 100%;
+	height: 1000px;
+	display: inline-block;
+}
+
+#title {
+	text-align: center;
+	margin-top: 2%;
+}
+
+#calculator {
+	width: 25%;
+	height: 50%;
+	margin: 0 auto;
+}
+
+#resultbar {
+	width: 100%;
+	height: 25%;
+	background-color: #595959;
+	text-align: right;
+	color: white;
+	display: inline-block;
+}
+
+#result {
+	font-size: 50px;
+	margin: 30px 10px 0 0;
+}
+
+#baloldal {                           /* ezeknem nem nem fog kelleni majd hatterszin, csak szemleltetes most*/
+	width: 75%;
+	height: 75%;
+	float: left;
+	text-align: center;
+}
+
+.balgombok {
+	background-color: #d9d9d9;
+	font-size: 25px;
+	border: solid 1px gray;
+	margin: 0;
+	outline-style: none;
+	float: left;
+	width: 33.33%;
+	height: 100%;
+}
+
+.balgombok:active {
+	background-color: #999999;
+	font-size: 25px;
+	border: solid 1px gray;
+	margin: 0;
+	float: left;
+	width: 33.33%;
+	height: 100%;
+	outline-color: #ffa31a;
+}
+
+.sorok {
+	width: 100%;
+	height: 20%;
+}
+
+#zero {
+	background-color: #d9d9d9;
+	font-size: 25px;
+	border: solid 1px gray;
+	margin: 0;
+	outline-color: #ffa31a;
+	float: left;
+	width: 66.66%;
+	height: 100%;
+}
+
+#zero:active {
+	background-color: #999999;
+	outline-style: none;
+	outline-color: none;
+}
+
+#jobboldal {                           /* ezeknem nem nem fog kelleni majd hatterszin, csak szemleltetes most*/
+	width: 25%;
+	height: 75%;
+	float: right;
+}
+
+.jobbgombok {
+	background-color: #ffa31a;
+	font-size: 25px;
+	border: solid 1px gray;
+	margin: 0;
+	outline-color: #ffa31a;
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
+.jobbgombok:active {                          /*miert nem tunik el a sarga keret?*/
+	background-color: #e68a00;
+	font-size: 25px;
+	border: solid 1px gray;
+	margin: 0;
+	outline-color: none;
+	outline-style: hidden;
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="allpage">
+	<h1 id="title">Calculate ur stuff here</h1>
+	<div id="calculator">
+		<div id="resultbar">
+			<p id="result">0</p>                             
+		</div>
+		<div id="baloldal">
+			<div id="balsor1" class="sorok">
+				<button type="button" id="AC" class="balgombok"
+				onclick="reset()">AC</button>
+				<button type="button" id="plusminusbutton" class="balgombok" 
+				onclick=""><sup>+</sup>/<sub>-</sub></button>
+				<button type="button" id="percent" class="balgombok" 
+				onclick="">%</button>
+			</div>
+			<div id="balsor2" class="sorok">
+				<button type="button" id="seven" class="balgombok" value="7" 
+				onclick="showNumber(7)">7</button>
+				<button type="button" id="eight" class="balgombok" value="8" 
+				onclick="showNumber(8)">8</button>
+				<button type="button" id="nine" class="balgombok" value="9" 
+				onclick="showNumber(9)">9</button>
+			</div>
+			<div id="balsor3" class="sorok">
+				<button type="button" id="four" class="balgombok" value="4" 
+				onclick="showNumber(4)">4</button>
+				<button type="button" id="five" class="balgombok" value="5" 
+				onclick="showNumber(5)">5</button>
+				<button type="button" id="six" class="balgombok" value="6" 
+				onclick="showNumber(6)">6</button>
+			</div>
+			<div id="balsor4" class="sorok">
+				<button type="button" id="one" class="balgombok" value="1" 
+				onclick="showNumber(1)">1</button>
+				<button type="button" id="two" class="balgombok" value="2" 
+				onclick="showNumber(2)">2</button>
+				<button type="button" id="three" class="balgombok" value="3" 
+				onclick="showNumber(3)">3</button>
+			</div>
+			<div id="balsor5" class="sorok">
+				<button type="button" id="zero" value="0" 
+				onclick="showNumber(0)">0</button>
+				<button type="button" id="vesszo" class="balgombok" value="," 
+				onclick="">,</button>
+			</div>
+		</div>
+		<div id="jobboldal">
+			<div id="jobbsor1" class="sorok">
+				<button type="button" id="osztas" class="jobbgombok" value="/" 
+				onclick="defineOperation('/')">/</button>
+				<button type="button" id="szorzas" class="jobbgombok" value="X" 
+				onclick="defineOperation('*')">X</button>
+				<button type="button" id="minuszjel" class="jobbgombok" value="-" 
+				onclick="defineOperation('-')">-</button>
+				<button type="button" id="pluszjel" class="jobbgombok" value="+" 
+				onclick="defineOperation('+')">+</button>
+				<button type="button" id="egyenlojel" class="jobbgombok" 
+				onclick="performCalc()">=</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript">
+		var $isFirst = true;
+		var $a = null;
+		var $b = null;
+		var $operator = null;
+		var $result = 0;
+		
+		function showNumber($nr) {
+			if ($isFirst == true) { 
+				document.getElementById('result').innerHTML = "";
+				$isFirst = false;  
+			}
+			document.getElementById('result').innerHTML += $nr;
+			if ($operator == null) {
+				$a = document.getElementById('result').innerHTML;	
+			} else {
+				$b = document.getElementById('result').innerHTML;	
+			}
+		}
+		
+		function defineOperation($op) {
+			$operator = $op;
+			$isFirst = true;
+		}
+
+		function performCalc() {
+			$result = eval($a + $operator + $b);
+			$a = $result;
+			$operator = null;
+			$b = null;
+			document.getElementById('result').innerHTML = $result;
+		}
+
+		function reset() {
+			$a = null;
+			$b = null;
+			$operator = null;
+			$result = null;
+			document.getElementById('result').innerHTML = 0;
+		}
+
+	</script>
+</body>
+</html>
+
